@@ -69,6 +69,8 @@ const styles = StyleSheet.create({
     position: 'absolute',
     left: 10,
     justifyContent: 'center',
+    fontSize: 24,
+    fontWeight: '700',
   },
   right: {
     position: 'absolute',
