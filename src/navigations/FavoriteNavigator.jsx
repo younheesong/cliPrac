@@ -8,7 +8,7 @@ import Icon from '../components/Icon';
 import styles from '../layouts/Header/styles';
 
 const Stack = createNativeStackNavigator();
-const FavoriteNavigator = () => {
+const FavoriteNavigator = ({navigator}) => {
   return (
     <Stack.Navigator>
       <Stack.Screen

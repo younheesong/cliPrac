@@ -1,7 +1,6 @@
 import React from 'react';
 import {View, Text, TouchableOpacity} from 'react-native';
-import {StyleSheet} from 'react-native';
-
+import styles from './styles';
 type headerProps = {
   center: React.ReactNode,
   centerPress: Function,
@@ -50,31 +49,31 @@ export default function CustomHeader({
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    height: 64,
-    backgroundColor: '#fff',
-    justifyContent: 'center',
-  },
-  center: {
-    height: '100%',
-    zIndex: -1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    position: 'absolute',
-    right: 0,
-    left: 0,
-  },
-  left: {
-    position: 'absolute',
-    left: 10,
-    justifyContent: 'center',
-    fontSize: 24,
-    fontWeight: '700',
-  },
-  right: {
-    position: 'absolute',
-    right: 10,
-    justifyContent: 'center',
-  },
-});
+// const styles = StyleSheet.create({
+//   container: {
+//     height: 64,
+//     backgroundColor: '#fff',
+//     justifyContent: 'center',
+//   },
+//   center: {
+//     height: '100%',
+//     zIndex: -1,
+//     justifyContent: 'center',
+//     alignItems: 'center',
+//     position: 'absolute',
+//     right: 0,
+//     left: 0,
+//   },
+//   left: {
+//     position: 'absolute',
+//     left: 10,
+//     justifyContent: 'center',
+//     fontSize: 24,
+//     fontWeight: '700',
+//   },
+//   right: {
+//     position: 'absolute',
+//     right: 10,
+//     justifyContent: 'center',
+//   },
+// });

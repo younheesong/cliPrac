@@ -8,9 +8,43 @@ const Favorite = ({navigation}) => {
   const wvRef = useRef(null);
   const {changeNavState} = useWebViewNavState({navigation, wvRef});
 
+  useEffect(() => {
+    console.log(navigation);
+    navigation.setOptions({
+      tabBarStyle: {display: 'none'},
+    });
+    console.log(navigation.options);
+  }, []);
+
   const handleMessageFromWebview = data => {
     // data 처리 로직
     console.log('from webview: ' + data);
+    switch (data) {
+      case 'SHOW_HEADER':
+        navigation.setOptions({
+          headerShown: true,
+        });
+        break;
+      case 'HIDE_HEADER':
+        console.log(11);
+        navigation.setOptions({
+          headerShown: false,
+        });
+        break;
+      case 'SHOW_TAB':
+        navigation.getParent().setOptions({
+          tabBarStyle: {display: 'flex'},
+        });
+        break;
+      case 'HIDE_TAB':
+        console.log('hello');
+        navigation.getParent().setOptions({
+          tabBarStyle: {display: 'none'},
+        });
+        break;
+      default:
+        break;
+    }
   };
 
   return (
