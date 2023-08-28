@@ -3,8 +3,8 @@ import React from 'react';
 import {View, Text} from 'react-native';
 import Category from '../screens/category/Category';
 import CustomHeader from '../layouts/Header/CustomHeader';
-import Icon from '../components/Icon';
 import styles from '../layouts/Header/styles';
+import Icon from 'react-native-vector-icons/MaterialIcons';
 const Stack = createNativeStackNavigator();
 const CategoryNavigator = () => {
   return (
@@ -16,7 +16,7 @@ const CategoryNavigator = () => {
           header: ({navigation}) => (
             <CustomHeader
               left={<Text style={styles.leftTitle}>카테고리</Text>}
-              right={<Icon name="search" fill={'#fff'} stroke={'#fff'} />}
+              right={<Icon name="search" size={36} size={36} />}
               rightPress={() => navigation.navigate('Search')}
             />
           ),

@@ -6,8 +6,8 @@ import Search from '../screens/search/Search';
 import Notification from '../screens/notification/Notification';
 import ShoppingBasket from '../screens/shoppingBasket/ShoppingBasket';
 import CustomHeader from '../layouts/Header/CustomHeader';
-import Icon from '../components/Icon';
 import {Text} from 'react-native';
+import Icon from 'react-native-vector-icons/AntDesign';
 const Stack = createNativeStackNavigator();
 
 const AppNavigator = () => {
@@ -25,7 +25,7 @@ const AppNavigator = () => {
           options={{
             header: ({navigation}) => (
               <CustomHeader
-                left={<Icon name="leftArrow" />}
+                left={<Icon name="arrowleft" size={36} />}
                 leftPress={navigation.goBack}
                 center={
                   <Text style={{fontSize: 16, fontWeight: '500'}}>Search</Text>
@@ -40,7 +40,7 @@ const AppNavigator = () => {
           options={{
             header: ({navigation}) => (
               <CustomHeader
-                left={<Icon name="leftArrow" />}
+                left={<Icon name="arrowleft" size={36} />}
                 leftPress={navigation.goBack}
                 center={
                   <Text style={{fontSize: 16, fontWeight: '500'}}>
@@ -57,7 +57,7 @@ const AppNavigator = () => {
           options={{
             header: ({navigation}) => (
               <CustomHeader
-                left={<Icon name="leftArrow" />}
+                left={<Icon name="arrowleft" size={36} />}
                 leftPress={navigation.goBack}
                 center={
                   <Text style={{fontSize: 16, fontWeight: '500'}}>

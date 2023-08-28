@@ -4,10 +4,10 @@ import DetailWithTab from '../screens/home/DetailWithTab';
 import DetailWithNoTab from '../screens/home/DetailWithNoTab';
 import CustomHeader from '../layouts/Header/CustomHeader';
 import {View, Text} from 'react-native';
-import Icon from '../components/Icon';
 import Home from '../screens/home/Home';
 import useHiddenTab from '../hooks/useHiddenTab';
 import styles from '../layouts/Header/styles';
+import Icon from 'react-native-vector-icons/AntDesign';
 const Stack = createNativeStackNavigator();
 const HomeNavigator = ({navigation, route}) => {
   useHiddenTab({navigation, route});
@@ -21,7 +21,7 @@ const HomeNavigator = ({navigation, route}) => {
           header: ({navigation}) => (
             <CustomHeader
               left={<Text style={styles.leftTitle}>홈</Text>}
-              right={<Icon name="basket" fill={'#fff'} stroke={'#fff'} />}
+              right={<Icon name="shoppingcart" size={36} />}
               rightPress={() => navigation.navigate('ShoppingBasket')}
             />
           ),
@@ -33,7 +33,7 @@ const HomeNavigator = ({navigation, route}) => {
         options={{
           header: ({navigation}) => (
             <CustomHeader
-              left={<Icon name="leftArrow" />}
+              left={<Icon name="arrowleft" size={36} />}
               leftPress={navigation.goBack}
               center={<Text style={styles.centerTitle}>detail with Tab</Text>}
             />
@@ -46,7 +46,7 @@ const HomeNavigator = ({navigation, route}) => {
         options={{
           header: ({navigation}) => (
             <CustomHeader
-              left={<Icon name="leftArrow" />}
+              left={<Icon name="arrowleft" size={36} />}
               leftPress={navigation.goBack}
               center={
                 <Text style={styles.centerTitle}>detail with no Tab</Text>

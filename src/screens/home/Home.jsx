@@ -1,7 +1,5 @@
 import React from 'react';
 import {Text, View, Button, TouchableOpacity, SafeAreaView} from 'react-native';
-import BasketIcon from '../../components/Icon';
-import Icon from '../../components/Icon';
 
 const Home = ({navigation}) => {
   return (

@@ -3,7 +3,7 @@ import React from 'react';
 
 import Ranking from '../screens/ranking/Ranking';
 import CustomHeader from '../layouts/Header/CustomHeader';
-import Icon from '../components/Icon';
+import Icon from 'react-native-vector-icons/MaterialIcons';
 import {View, Text} from 'react-native';
 import styles from '../layouts/Header/styles';
 
@@ -17,8 +17,8 @@ const RankingNavigator = () => {
         options={{
           header: ({navigation}) => (
             <CustomHeader
-              left={<Text style={styles.leftTitle}>❤️‍🔥랭킹 아이템❤️‍🔥</Text>}
-              right={<Icon name="search" fill={'#fff'} stroke={'#fff'} />}
+              left={<Text style={styles.leftTitle}>랭킹 아이템</Text>}
+              right={<Icon name="search" size={36} size={36} />}
               rightPress={() => navigation.navigate('Search')}
             />
           ),

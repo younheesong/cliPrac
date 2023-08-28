@@ -5,9 +5,9 @@ import RankingNavigator from './RankingNavigator';
 import HomeNavigator from './HomeNavigator';
 import FavoriteNavigator from './FavoriteNavigator';
 import MyPageNavigator from './MyPageNavigator';
-import Icon from '../components/Icon';
 import {getFocusedRouteNameFromRoute} from '@react-navigation/native';
 import useToggleTab from '../hooks/useHiddenTab';
+import Icon from 'react-native-vector-icons/AntDesign';
 const Tab = createBottomTabNavigator();
 const MainNavigator = () => {
   return (
@@ -19,7 +19,13 @@ const MainNavigator = () => {
         component={CategoryNavigator}
         options={({route}) => ({
           tabBarIcon: ({focused, color, size}) => {
-            return <Icon name="menu" width={size} heigth={size} />;
+            return (
+              <Icon
+                name="bars"
+                size={size}
+                color={focused ? 'black' : 'grey'}
+              />
+            );
           },
           headerShown: false,
         })}></Tab.Screen>
@@ -28,7 +34,13 @@ const MainNavigator = () => {
         component={RankingNavigator}
         options={{
           tabBarIcon: ({focused, color, size}) => {
-            return <Icon name="dashboard" width={size} heigth={size} />;
+            return (
+              <Icon
+                name="appstore-o"
+                size={size}
+                color={focused ? 'black' : 'grey'}
+              />
+            );
           },
           headerShown: false,
         }}></Tab.Screen>
@@ -37,7 +49,13 @@ const MainNavigator = () => {
         component={HomeNavigator}
         options={({route}) => ({
           tabBarIcon: ({focused, color, size}) => {
-            return <Icon name="home" width={size} heigth={size} />;
+            return (
+              <Icon
+                name="home"
+                size={size}
+                color={focused ? 'black' : 'grey'}
+              />
+            );
           },
           headerShown: false,
         })}></Tab.Screen>
@@ -46,7 +64,13 @@ const MainNavigator = () => {
         component={FavoriteNavigator}
         options={{
           tabBarIcon: ({focused, color, size}) => {
-            return <Icon name="heart" width={size} heigth={size} />;
+            return (
+              <Icon
+                name="hearto"
+                size={size}
+                color={focused ? 'black' : 'grey'}
+              />
+            );
           },
           headerShown: false,
         }}></Tab.Screen>
@@ -55,7 +79,13 @@ const MainNavigator = () => {
         component={MyPageNavigator}
         options={{
           tabBarIcon: ({focused, color, size}) => {
-            return <Icon name="user" width={size} heigth={size} />;
+            return (
+              <Icon
+                name="user"
+                size={size}
+                color={focused ? 'black' : 'grey'}
+              />
+            );
           },
           headerShown: false,
         }}></Tab.Screen>
