@@ -1,9 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import {BackHandler, View, Text, SafeAreaView} from 'react-native';
 import CustomHeader from '../layouts/Header/CustomHeader';
-import Icon from '../components/Icon';
 
-const useWebViewNavState = ({navigation, wvRef}) => {
+const useWebViewBackHandling = ({navigation, wvRef}) => {
   const [navState, changeNavState] = useState();
   useEffect(() => {
     const canGoBack = navState?.canGoBack;
@@ -37,4 +36,4 @@ const useWebViewNavState = ({navigation, wvRef}) => {
   return {changeNavState};
 };
 
-export default useWebViewNavState;
+export default useWebViewBackHandling;
